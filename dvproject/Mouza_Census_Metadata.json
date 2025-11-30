@@ -1,0 +1,239 @@
+{
+  "dataset_info": {
+    "name": "Mouza Census 2020 - Cleaned",
+    "total_rows": 51888,
+    "total_columns": 224,
+    "description": "Cleaned census data for Mouza villages in Pakistan"
+  },
+  "value_encodings": {
+    "binary_columns": {
+      "description": "Binary indicator columns (presence/absence)",
+      "encoding": {
+        "1": "Yes/Present",
+        "0": "No/Absent",
+        "NaN": "No data available"
+      },
+      "applies_to": [
+        "Major Crop columns (Wheat, Rice, Cotton, etc.)",
+        "Irrigation System columns",
+        "Source of Drinking Water columns",
+        "Health facility availability columns",
+        "Education facility availability columns",
+        "Sports playground columns",
+        "Media source columns"
+      ]
+    },
+    "distance_columns": {
+      "description": "Distance in kilometers when facility not available in mouza",
+      "encoding": {
+        "0": "Facility available in mouza (distance = 0)",
+        "positive_value": "Distance in km to nearest facility",
+        "NaN": "No data available"
+      },
+      "pattern": "Paired with availability column (if available=0, then distance=actual km)"
+    },
+    "availability_distance_pairs": {
+      "description": "Facility availability with corresponding distance",
+      "encoding": {
+        "availability": {
+          "1": "Available in mouza",
+          "0": "Not available in mouza",
+          "NaN": "No data"
+        },
+        "distance": {
+          "0": "In mouza (when availability=1)",
+          "positive_value": "Distance in km (when availability=0)",
+          "NaN": "No data"
+        }
+      }
+    },
+    "construction_type": {
+      "description": "Construction Type of Majority of Houses",
+      "column": "Construction Type of Majority of Houses",
+      "encoding": {
+        "1": "Pacca (permanent/brick)",
+        "2": "Semi-Pacca (semi-permanent)",
+        "3": "Kacha (temporary/mud)",
+        "4": "Mixed",
+        "NaN": "No data"
+      }
+    },
+    "street_status": {
+      "description": "Status Type of Majority of Streets",
+      "column": "Status Type of Majority of Streets",
+      "encoding": {
+        "1": "Paved/Metalled",
+        "2": "Unpaved",
+        "3": "Partially paved",
+        "4": "No proper streets",
+        "NaN": "No data"
+      }
+    },
+    "sewerage_system": {
+      "description": "Sewerage System Coverage",
+      "encoding": {
+        "1": "Complete coverage",
+        "2": "Partial coverage",
+        "3": "Limited coverage",
+        "4": "No coverage",
+        "NaN": "No data"
+      }
+    },
+    "ngo_columns": {
+      "description": "NGO presence in mouza (Male and Female groups)",
+      "encoding": {
+        "1": "NGO type present",
+        "0": "NGO type not present",
+        "NaN": "No data for entire group"
+      },
+      "mutual_exclusivity": "If 'None' column = 1, all other NGO types = 0",
+      "groups": [
+        "Male NGOs",
+        "Female NGOs"
+      ]
+    },
+    "industry_columns": {
+      "description": "Industry scales present in mouza",
+      "encoding": {
+        "1": "Industry scale present",
+        "0": "Industry scale not present",
+        "NaN": "No data"
+      },
+      "mutual_exclusivity": "If 'None' = 1, all industry scales = 0",
+      "types": [
+        "Large Scale",
+        "Medium Scale",
+        "Small Scale",
+        "Cottage"
+      ]
+    },
+    "employment_columns": {
+      "description": "Sources of employment for populace (Male and Female)",
+      "encoding": {
+        "1": "Mostly employed in this sector",
+        "2": "Some employment in this sector",
+        "0": "Not employed in this sector",
+        "NaN": "No data"
+      },
+      "groups": [
+        "Male",
+        "Female"
+      ],
+      "sectors": [
+        "Service",
+        "Agriculture",
+        "Trade",
+        "Industry",
+        "Personal Business",
+        "Overseas",
+        "Labour"
+      ]
+    },
+    "credit_sources": {
+      "description": "Sources of agricultural credit available",
+      "encoding": {
+        "1": "Credit source available",
+        "0": "Credit source not available",
+        "NaN": "No credit data for mouza"
+      },
+      "group_nan_rule": "NaN only when all credit sources are empty"
+    },
+    "natural_disasters": {
+      "description": "Natural disasters in last 5 years",
+      "encoding": {
+        "main_column": {
+          "1": "Yes, disaster occurred",
+          "0": "No disaster",
+          "NaN": "No data"
+        },
+        "disaster_types": {
+          "1": "This type occurred",
+          "0": "This type did not occur (or no disaster)",
+          "NaN": "No disaster data"
+        }
+      },
+      "conditional_logic": "Disaster types only marked if main column = 1"
+    }
+  },
+  "column_groups": {
+    "identification": {
+      "columns": [
+        "Unnamed: 0",
+        "Name of Province",
+        "div_code",
+        "Name of Division",
+        "dist_code",
+        "Name of District",
+        "teh_code",
+        "Name of Tehsil",
+        "vil_code",
+        "Name of Village",
+        "Status of Mouza \n1-Rural \n2-Urban \n3-Partly Urban \n4-Forest \n5-Un\u0002Populated"
+      ],
+      "description": "Province, Division, District, Tehsil, Village identification"
+    },
+    "crops_irrigation": {
+      "range": "12-27",
+      "description": "Major crops and irrigation systems"
+    },
+    "water_facilities": {
+      "range": "28-42",
+      "description": "Water courses, irrigation improvements, drinking water sources"
+    },
+    "infrastructure": {
+      "range": "37-55",
+      "description": "Housing construction, streets, waste management, sewerage"
+    },
+    "health_facilities": {
+      "range": "56-71",
+      "description": "Health centers, hospitals, dispensaries with availability and distance"
+    },
+    "education_facilities": {
+      "range": "72-95",
+      "description": "Schools, colleges, vocational institutes (Boys and Girls) with availability and distance"
+    },
+    "sports": {
+      "range": "96-109",
+      "description": "Male and Female sports playgrounds"
+    },
+    "veterinary": {
+      "range": "110-119",
+      "description": "Veterinary facilities and farms"
+    },
+    "utilities": {
+      "range": "120-137",
+      "description": "Electricity, alternate energy, fuel sources, roads, media"
+    },
+    "market_facilities": {
+      "range": "138-177",
+      "description": "Markets, wholesale markets, communication facilities, community facilities, disasters"
+    },
+    "credit_sources": {
+      "range": "178-186",
+      "description": "Agricultural credit sources"
+    },
+    "additional_facilities": {
+      "range": "187-194",
+      "description": "Banks, reconciliation committees, post offices, police stations"
+    },
+    "ngos": {
+      "range": "195-204",
+      "description": "Male and Female NGO presence"
+    },
+    "industries": {
+      "range": "205-209",
+      "description": "Industry scales in mouza"
+    },
+    "employment": {
+      "range": "210-223",
+      "description": "Male and Female employment by sector"
+    }
+  },
+  "data_cleaning_notes": {
+    "missing_data": "Represented as NaN",
+    "zero_conversion": "Original 0 values converted to NaN where 0 meant 'no data'",
+    "binary_columns": "1 = Yes/Present, 0 = No/Absent",
+    "group_nan_rule": "For grouped columns, NaN only when ALL columns in group are empty",
+    "mutual_exclusivity": "Some groups have 'None' columns that are mutually exclusive with other options"
+  }
+}

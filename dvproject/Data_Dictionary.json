@@ -1,0 +1,604 @@
+{
+  "Total Number of Settlements": {
+    "type": "Numeric",
+    "description": "Count of settlements in the mouza",
+    "values": "Positive integers or NaN (no data)"
+  },
+  "Major Crop Wheat": {
+    "type": "Binary",
+    "values": "1=Present, 0=Absent, NaN=No agriculture data"
+  },
+  "Major Crop Rice": {
+    "type": "Binary",
+    "values": "1=Present, 0=Absent, NaN=No agriculture data"
+  },
+  "Major Crop Cotton": {
+    "type": "Binary",
+    "values": "1=Present, 0=Absent, NaN=No agriculture data"
+  },
+  "Major Crop Sugarcane": {
+    "type": "Binary",
+    "values": "1=Present, 0=Absent, NaN=No agriculture data"
+  },
+  "Major Crop Maize": {
+    "type": "Binary",
+    "values": "1=Present, 0=Absent, NaN=No agriculture data"
+  },
+  "Major Crop Pulses": {
+    "type": "Binary",
+    "values": "1=Present, 0=Absent, NaN=No agriculture data"
+  },
+  "Major Crop Orchard": {
+    "type": "Binary",
+    "values": "1=Present, 0=Absent, NaN=No agriculture data"
+  },
+  "Major Crop Vegetables": {
+    "type": "Binary",
+    "values": "1=Present, 0=Absent, NaN=No agriculture data"
+  },
+  "Irrigation System Canal": {
+    "type": "Binary",
+    "values": "1=Present, 0=Absent, NaN=No agriculture data"
+  },
+  "Irrigation System River": {
+    "type": "Binary",
+    "values": "1=Present, 0=Absent, NaN=No agriculture data"
+  },
+  "Irrigation System Tubwell/Well": {
+    "type": "Binary",
+    "values": "1=Present, 0=Absent, NaN=No agriculture data"
+  },
+  "Irrigation System Ravine/Stream": {
+    "type": "Binary",
+    "values": "1=Present, 0=Absent, NaN=No agriculture data"
+  },
+  "Irrigation System Spring/Karez": {
+    "type": "Binary",
+    "values": "1=Present, 0=Absent, NaN=No agriculture data"
+  },
+  "Irrigation System Arid": {
+    "type": "Binary",
+    "values": "1=Present, 0=Absent, NaN=No agriculture data"
+  },
+  "Irrigation System Flooding Torrent": {
+    "type": "Binary",
+    "values": "1=Present, 0=Absent, NaN=No agriculture data"
+  },
+  "Irrigation System Others": {
+    "type": "Binary",
+    "values": "1=Present, 0=Absent, NaN=No agriculture data"
+  },
+  "Water Course Improvement Scheme Canal Irrigation": {
+    "type": "Binary",
+    "values": "1=Yes (has scheme), 0=No, NaN=No data"
+  },
+  "Total Number of Water Courses": {
+    "type": "Numeric",
+    "description": "Count of water courses",
+    "values": "Positive integers, 0=None when scheme exists, NaN=No scheme or no data"
+  },
+  "Number of Improved Water Courses": {
+    "type": "Numeric",
+    "description": "Count of improved water courses",
+    "values": "Positive integers, 0=None when scheme exists, NaN=No scheme or no data"
+  },
+  "Total Length of Improved Water Courses (Meters)": {
+    "type": "Numeric",
+    "description": "Total length in meters",
+    "values": "Positive numbers, 0=None when scheme exists, NaN=No scheme or no data",
+    "unit": "Meters"
+  },
+  "Number of Drip Systems": {
+    "type": "Numeric",
+    "values": "Count of systems, 0=No systems used, NaN=No data"
+  },
+  "Number of Sprinkler Systems": {
+    "type": "Numeric",
+    "values": "Count of systems, 0=No systems used, NaN=No data"
+  },
+  "Number of Other Irrigation Systems": {
+    "type": "Numeric",
+    "values": "Count of systems, 0=No systems used, NaN=No data"
+  },
+  "No Modern Irrigation System": {
+    "type": "Binary",
+    "values": "1=No modern systems used, NaN=No data"
+  },
+  "Depth of Water Table in ft": {
+    "type": "Numeric",
+    "description": "Depth to water table",
+    "values": "Positive numbers, NaN=No data",
+    "unit": "Feet"
+  },
+  "Construction Type of Majority of Houses": {
+    "type": "Categorical",
+    "values": {
+      "1": "Bricked",
+      "2": "Mud",
+      "3": "Bricks & Mud (Mixed)",
+      "4": "Others",
+      "NaN": "No data"
+    }
+  },
+  "Status Type of Majority of Streets": {
+    "type": "Categorical",
+    "values": {
+      "1": "Metaled",
+      "2": "Cemented",
+      "3": "Bricked/Soling",
+      "4": "Dirt",
+      "NaN": "No data"
+    }
+  },
+  "Waste Management": {
+    "type": "Binary",
+    "values": "1=Yes (has system), 0=No, NaN=No data"
+  },
+  "Waste Management Type": {
+    "type": "Categorical",
+    "values": {
+      "1": "Government",
+      "2": "Private",
+      "0": "None",
+      "NaN": "No data"
+    }
+  },
+  "Sweet Underground Water": {
+    "type": "Binary",
+    "values": "1=Yes (sweet water), 0=No (brackish), NaN=No data"
+  },
+  "Distance to Sweet Water in km": {
+    "type": "Numeric",
+    "values": "0=Sweet water available locally, >0=Distance to travel, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Source of Drinking Water: Govt Piped Supply": {
+    "type": "Binary",
+    "values": "1=Available, 0=Not available, NaN=No water source data"
+  },
+  "Source of Drinking Water: Personal Hand/Electric Pump": {
+    "type": "Binary",
+    "values": "1=Available, 0=Not available, NaN=No water source data"
+  },
+  "Source of Drinking Water: Water Filtration Plant": {
+    "type": "Binary",
+    "values": "1=Available, 0=Not available, NaN=No water source data"
+  },
+  "Source of Drinking Water: Reverse Osmosis Plant": {
+    "type": "Binary",
+    "values": "1=Available, 0=Not available, NaN=No water source data"
+  },
+  "Source of Drinking Water: Pump on Canal": {
+    "type": "Binary",
+    "values": "1=Available, 0=Not available, NaN=No water source data"
+  },
+  "Source of Drinking Water: Spring/Karez": {
+    "type": "Binary",
+    "values": "1=Available, 0=Not available, NaN=No water source data"
+  },
+  "Source of Drinking Water: Well": {
+    "type": "Binary",
+    "values": "1=Available, 0=Not available, NaN=No water source data"
+  },
+  "Source of Drinking Water: River/Stream": {
+    "type": "Binary",
+    "values": "1=Available, 0=Not available, NaN=No water source data"
+  },
+  "Source of Drinking Water: Pond": {
+    "type": "Binary",
+    "values": "1=Available, 0=Not available, NaN=No water source data"
+  },
+  "Source of Drinking Water: Others": {
+    "type": "Binary",
+    "values": "1=Available, 0=Not available, NaN=No water source data"
+  },
+  "Toilet Facility in Majority of Houses": {
+    "type": "Categorical",
+    "values": {
+      "1": "Inside the House",
+      "2": "Open Place",
+      "NaN": "No data"
+    }
+  },
+  "Sewerage System: Cemented Drain": {
+    "type": "Categorical",
+    "values": {
+      "1": "All",
+      "2": "Mostly",
+      "3": "Same (Equal)",
+      "4": "None",
+      "NaN": "No data"
+    }
+  },
+  "Sewerage System: Coverage": {
+    "type": "Categorical",
+    "values": {
+      "1": "All",
+      "2": "Mostly",
+      "3": "Same (Equal)",
+      "4": "None",
+      "NaN": "No data"
+    }
+  },
+  "Population Welfare Centre Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No health facility data"
+  },
+  "Population Welfare Centre Distance (km)": {
+    "type": "Numeric",
+    "values": "0=Available locally, >0=Distance to nearest facility, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Basic Health Unit Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No health facility data"
+  },
+  "Basic Health Unit Distance (km)": {
+    "type": "Numeric",
+    "values": "0=Available locally, >0=Distance to nearest facility, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Rural Health Centre Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No health facility data"
+  },
+  "Rural Health Centre Distance (km)": {
+    "type": "Numeric",
+    "values": "0=Available locally, >0=Distance to nearest facility, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "NGO Dispensary Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No health facility data"
+  },
+  "NGO Dispensary Distance (km)": {
+    "type": "Numeric",
+    "values": "0=Available locally, >0=Distance to nearest facility, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Child/Mother Care Centre Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No health facility data"
+  },
+  "Child/Mother Care Centre Distance (km)": {
+    "type": "Numeric",
+    "values": "0=Available locally, >0=Distance to nearest facility, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Private Doctor (MBBS) Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No health facility data"
+  },
+  "Private Doctor (MBBS) Distance (km)": {
+    "type": "Numeric",
+    "values": "0=Available locally, >0=Distance to nearest facility, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Hospital/Dispensary Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No health facility data"
+  },
+  "Hospital/Dispensary Distance (km)": {
+    "type": "Numeric",
+    "values": "0=Available locally, >0=Distance to nearest facility, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Facility of Midwife Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No health facility data"
+  },
+  "Facility of Midwife Distance (km)": {
+    "type": "Numeric",
+    "values": "0=Available locally, >0=Distance to nearest facility, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Boys Primary School Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No education data for this gender"
+  },
+  "Boys Primary School Distance (km)": {
+    "type": "Numeric",
+    "values": "0=Available locally, >0=Distance to nearest institution, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Boys Middle School Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No education data for this gender"
+  },
+  "Boys Middle School Distance (km)": {
+    "type": "Numeric",
+    "values": "0=Available locally, >0=Distance to nearest institution, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Boys High/Higher Secondary School Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No education data for this gender"
+  },
+  "Boys High/Higher Secondary School Distance (km)": {
+    "type": "Numeric",
+    "values": "0=Available locally, >0=Distance to nearest institution, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Boys College Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No education data for this gender"
+  },
+  "Boys College Distance (km)": {
+    "type": "Numeric",
+    "values": "0=Available locally, >0=Distance to nearest institution, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Boys Vocational Institute Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No education data for this gender"
+  },
+  "Boys Vocational Institute Distance (km)": {
+    "type": "Numeric",
+    "values": "0=Available locally, >0=Distance to nearest institution, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Boys Religious Institution Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No education data for this gender"
+  },
+  "Boys Religious Institution Distance (km)": {
+    "type": "Numeric",
+    "values": "0=Available locally, >0=Distance to nearest institution, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Girls Primary School Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No education data for this gender"
+  },
+  "Girls Primary School Distance (km)": {
+    "type": "Numeric",
+    "values": "0=Available locally, >0=Distance to nearest institution, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Girls Middle School Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No education data for this gender"
+  },
+  "Girls Middle School Distance (km)": {
+    "type": "Numeric",
+    "values": "0=Available locally, >0=Distance to nearest institution, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Girls High/Higher Secondary School Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No education data for this gender"
+  },
+  "Girls High/Higher Secondary School Distance (km)": {
+    "type": "Numeric",
+    "values": "0=Available locally, >0=Distance to nearest institution, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Girls College Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No education data for this gender"
+  },
+  "Girls College Distance (km)": {
+    "type": "Numeric",
+    "values": "0=Available locally, >0=Distance to nearest institution, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Girls Vocational Institute Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No education data for this gender"
+  },
+  "Girls Vocational Institute Distance (km)": {
+    "type": "Numeric",
+    "values": "0=Available locally, >0=Distance to nearest institution, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Girls Religious Institution Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No education data for this gender"
+  },
+  "Girls Religious Institution Distance (km)": {
+    "type": "Numeric",
+    "values": "0=Available locally, >0=Distance to nearest institution, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Male Cricket Playground": {
+    "type": "Binary",
+    "values": "1=Playground exists, 0=Does not exist, NaN=No playground data for this gender"
+  },
+  "Male Hockey Playground": {
+    "type": "Binary",
+    "values": "1=Playground exists, 0=Does not exist, NaN=No playground data for this gender"
+  },
+  "Male Football Playground": {
+    "type": "Binary",
+    "values": "1=Playground exists, 0=Does not exist, NaN=No playground data for this gender"
+  },
+  "Male Volleyball Playground": {
+    "type": "Binary",
+    "values": "1=Playground exists, 0=Does not exist, NaN=No playground data for this gender"
+  },
+  "Male Kabbady Playground": {
+    "type": "Binary",
+    "values": "1=Playground exists, 0=Does not exist, NaN=No playground data for this gender"
+  },
+  "Male Other Sports Playground": {
+    "type": "Binary",
+    "values": "1=Playground exists, 0=Does not exist, NaN=No playground data for this gender"
+  },
+  "Male None Playground": {
+    "type": "Binary",
+    "values": "1=Playground exists, 0=Does not exist, NaN=No playground data for this gender"
+  },
+  "Female Cricket Playground": {
+    "type": "Binary",
+    "values": "1=Playground exists, 0=Does not exist, NaN=No playground data for this gender"
+  },
+  "Female Hockey Playground": {
+    "type": "Binary",
+    "values": "1=Playground exists, 0=Does not exist, NaN=No playground data for this gender"
+  },
+  "Female Football Playground": {
+    "type": "Binary",
+    "values": "1=Playground exists, 0=Does not exist, NaN=No playground data for this gender"
+  },
+  "Female Volleyball Playground": {
+    "type": "Binary",
+    "values": "1=Playground exists, 0=Does not exist, NaN=No playground data for this gender"
+  },
+  "Female Kabbady Playground": {
+    "type": "Binary",
+    "values": "1=Playground exists, 0=Does not exist, NaN=No playground data for this gender"
+  },
+  "Female Other Sports Playground": {
+    "type": "Binary",
+    "values": "1=Playground exists, 0=Does not exist, NaN=No playground data for this gender"
+  },
+  "Female None Playground": {
+    "type": "Binary",
+    "values": "1=Playground exists, 0=Does not exist, NaN=No playground data for this gender"
+  },
+  "Dispensary/Veterinary Centre Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No veterinary facility data"
+  },
+  "Dispensary/Veterinary Centre Distance (km)": {
+    "type": "Numeric",
+    "values": "0=Available locally, >0=Distance to nearest facility, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Private Veterinary Facility Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No veterinary facility data"
+  },
+  "Private Veterinary Facility Distance (km)": {
+    "type": "Numeric",
+    "values": "0=Available locally, >0=Distance to nearest facility, NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Mobile Veterinary Dispenser Available": {
+    "type": "Binary",
+    "values": "1=Available in mouza, 0=Not available, NaN=No veterinary facility data"
+  },
+  "No Farms": {
+    "type": "Binary",
+    "values": "1=No farms in mouza, 0=Has farms, NaN=No farm data",
+    "description": "Mutually exclusive with farm count columns"
+  },
+  "Number of Poultry Farms": {
+    "type": "Numeric",
+    "values": "Count of poultry farms, 0=No farms/None when No Farms=1, NaN=No data"
+  },
+  "Number of Livestock/Dairy Farms": {
+    "type": "Numeric",
+    "values": "Count of livestock/dairy farms, 0=No farms/None when No Farms=1, NaN=No data"
+  },
+  "Number of Fish Farms": {
+    "type": "Numeric",
+    "values": "Count of fish farms, 0=No farms/None when No Farms=1, NaN=No data"
+  },
+  "Electricity Availability": {
+    "type": "Categorical",
+    "values": {
+      "1": "All (full coverage)",
+      "2": "Mostly (partial coverage)",
+      "3": "Some (limited coverage)",
+      "4": "None (no electricity)",
+      "NaN": "No data"
+    }
+  },
+  "Distance to Electricity (km)": {
+    "type": "Numeric",
+    "values": "0=Has electricity (Availability 1-3), >0=Distance when no electricity (Availability 4), NaN=No data",
+    "unit": "Kilometers"
+  },
+  "Alternate Source: Solar Energy": {
+    "type": "Binary",
+    "values": "1=Source available, 0=Not available, NaN=No alternate source data",
+    "description": "Solar energy panels/systems"
+  },
+  "Alternate Source: Bio Gas": {
+    "type": "Binary",
+    "values": "1=Source available, 0=Not available, NaN=No alternate source data",
+    "description": "Biogas systems"
+  },
+  "Alternate Source: Generator": {
+    "type": "Binary",
+    "values": "1=Source available, 0=Not available, NaN=No alternate source data",
+    "description": "Diesel/petrol generators"
+  },
+  "Alternate Source: Others": {
+    "type": "Binary",
+    "values": "1=Source available, 0=Not available, NaN=No alternate source data",
+    "description": "Other alternate electricity sources"
+  },
+  "No Alternate Electricity Source": {
+    "type": "Binary",
+    "values": "1=No alternate sources, 0=Has alternate sources, NaN=No data",
+    "description": "Mutually exclusive with other alternate source columns"
+  },
+  "Fuel: Sui Gas (Natural Gas)": {
+    "type": "Binary",
+    "values": "1=Available, 0=Not available, NaN=No fuel data",
+    "description": "Natural gas availability"
+  },
+  "Fuel: LPG": {
+    "type": "Binary",
+    "values": "1=Available, 0=Not available, NaN=No fuel data",
+    "description": "Liquefied petroleum gas availability"
+  },
+  "Fuel: Kerosene Oil": {
+    "type": "Binary",
+    "values": "1=Available, 0=Not available, NaN=No fuel data",
+    "description": "Kerosene oil availability"
+  },
+  "Fuel: Wood": {
+    "type": "Binary",
+    "values": "1=Available, 0=Not available, NaN=No fuel data",
+    "description": "Wood fuel availability"
+  },
+  "Fuel: Coal": {
+    "type": "Binary",
+    "values": "1=Available, 0=Not available, NaN=No fuel data",
+    "description": "Coal fuel availability"
+  },
+  "Road Type": {
+    "type": "Categorical",
+    "values": {
+      "Metaled": "Metaled road",
+      "Cemented/Concrete": "Cemented or concrete road",
+      "Brick Road": "Brick road",
+      "Unmetalled": "Unmetalled road"
+    },
+    "description": "Type of road facility to the mouza"
+  },
+  "Road Distance/Length (km)": {
+    "type": "Numeric",
+    "values": "Numeric value representing distance or length in kilometers, NaN=No data",
+    "unit": "Kilometers",
+    "description": "Distance or length of road (context depends on road type)"
+  },
+  "Media: Radio": {
+    "type": "Binary",
+    "values": "1=Available, 0=Not available, NaN=No media data",
+    "description": "Radio availability"
+  },
+  "Media: TV": {
+    "type": "Binary",
+    "values": "1=Available, 0=Not available, NaN=No media data",
+    "description": "Television availability"
+  },
+  "Media: Cable": {
+    "type": "Binary",
+    "values": "1=Available, 0=Not available, NaN=No media data",
+    "description": "Cable TV availability"
+  },
+  "Media: Newspaper": {
+    "type": "Binary",
+    "values": "1=Available, 0=Not available, NaN=No media data",
+    "description": "Newspaper availability"
+  },
+  "No Media Sources": {
+    "type": "Binary",
+    "values": "1=No media sources, 0=Has media sources, NaN=No data",
+    "description": "Mutually exclusive with other media source columns"
+  }
+}
