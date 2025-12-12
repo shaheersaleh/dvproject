@@ -194,25 +194,10 @@ def main():
     
     multi_map = folium.Map(
         location=[30.3753, 69.3451],
-        zoom_start=6,
+        zoom_start=5,
         tiles='cartodbpositron',
         control_scale=True
     )
-    
-    # Add title
-    title_html = '''
-    <div style="position: fixed; 
-                top: 10px; left: 60px; width: 450px; 
-                background-color: white; border:2px solid grey; z-index:9999; 
-                font-size:14px; padding: 10px; border-radius: 5px;
-                box-shadow: 3px 3px 10px rgba(0,0,0,0.3);">
-        <h3 style="margin:0; padding:0; color: #2c3e50;">Pakistan District Development Atlas</h3>
-        <p style="margin:5px 0 0 0; font-size:12px; color:#7f8c8d;">
-            Select ONE layer. Hover over districts for rankings.
-        </p>
-    </div>
-    '''
-    multi_map.get_root().html.add_child(folium.Element(title_html))
     
     # Define all layers using NORMALIZED WEIGHTED scores
     normalized_weighted_cols = [col + '_Normalized' for col in weighted_cols]
@@ -242,8 +227,9 @@ def main():
             data=pd.Series(data_dict),
             key_on='feature.properties.shapeName',
             fill_color='RdYlGn',
-            fill_opacity=0.7,
-            line_opacity=0.3,
+            fill_opacity=0.75,
+            line_opacity=0.1,
+            line_weight=0.5,
             legend_name=None,  # No legend for individual layers
             highlight=False,  # Disable to prevent click blocking
             nan_fill_color='#d3d3d3',
@@ -340,17 +326,25 @@ def main():
         content: 'Development Dimensions';
         display: block;
         font-weight: bold;
-        font-size: 14px;
-        margin-bottom: 8px;
-        padding-bottom: 8px;
-        border-bottom: 2px solid #ccc;
+        font-size: 11px;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #ccc;
         color: #2c3e50;
     }
     
     /* Style the layer control container */
     .leaflet-control-layers {
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        border-radius: 5px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        font-size: 10px;
+        padding: 8px;
+    }
+    
+    /* Make layer labels more compact */
+    .leaflet-control-layers label {
+        margin-bottom: 3px;
+        font-size: 10px;
     }
     </style>
     """
@@ -359,14 +353,14 @@ def main():
     # Add single custom legend
     legend_html = '''
     <div style="position: fixed; 
-                bottom: 50px; left: 50px; width: 200px; height: 120px; 
-                background-color: white; border:2px solid grey; z-index:9999; 
-                font-size:12px; padding: 10px; border-radius: 5px;
-                box-shadow: 3px 3px 10px rgba(0,0,0,0.3);">
-        <p style="margin:0; padding:0; font-weight:bold; margin-bottom:10px;">Development Score</p>
+                bottom: 40px; left: 40px; width: 150px; height: 90px; 
+                background-color: white; border:1px solid grey; z-index:9999; 
+                font-size:10px; padding: 8px; border-radius: 4px;
+                box-shadow: 2px 2px 6px rgba(0,0,0,0.2);">
+        <p style="margin:0; padding:0; font-weight:bold; margin-bottom:6px; font-size:11px;">Development Score</p>
         <div style="background: linear-gradient(to right, #d73027, #fee08b, #1a9850); 
-                    height: 20px; width: 100%; border-radius: 3px;"></div>
-        <div style="display: flex; justify-content: space-between; margin-top: 5px; font-size: 10px;">
+                    height: 15px; width: 100%; border-radius: 2px;"></div>
+        <div style="display: flex; justify-content: space-between; margin-top: 4px; font-size: 9px;">
             <span>0 (Worst)</span>
             <span>50</span>
             <span>100 (Best)</span>

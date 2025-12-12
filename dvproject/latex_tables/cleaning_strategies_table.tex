@@ -1,0 +1,44 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{booktabs}
+
+\begin{document}
+
+{\small
+\begin{longtable}{>{\raggedright\arraybackslash}p{3.8cm}>{\raggedright\arraybackslash}p{12cm}}
+\toprule
+\textbf{Strategy} & \textbf{Columns} \\
+\midrule
+\endfirsthead
+
+\multicolumn{2}{c}{\textit{Table \thetable\ -- Continued from previous page}} \\
+\toprule
+\textbf{Strategy} & \textbf{Columns} \\
+\midrule
+\endhead
+
+\midrule
+\multicolumn{2}{r}{\textit{Continued on next page}} \\
+\endfoot
+
+\bottomrule
+\multicolumn{2}{l}{\textbf{Table \thetable: Data Cleaning Strategies }} \label{tab:cleaning_strategies}
+\endlastfoot
+
+Binary encoding (n=64) & Major Crops: Wheat, Rice, Cotton, Sugarcane, Maize, Pulses, Orchard, Vegetables; Irrigation Systems: Canal, River, Tubwell/Well, Ravine/Stream, Spring/Karez, Arid, Flooding Torrent, Others; Drinking Water Sources: Govt Piped Supply, Personal Hand/Electric Pump, Water Filtration Plant, Reverse Osmosis Plant, Pump on Canal, Well, River/Canal, Spring/Karez, Pond/Toba, Others; Playgrounds (Male \& Female): Cricket, Hockey, Football, Volleyball, Kabbady, Other Sports, None; Mobile Veterinary Dispenser; Media: Radio, TV, Cable, Newspaper, No Sources; Alternate Electricity Sources: Solar Energy, Bio Gas, Generator, Others, No Source; Fuel: Sui Gas, LPG, Kerosene Oil, Wood, Coal; Numeric: Total Number of Settlements, Depth of Water Table in ft \\
+\midrule
+
+Binary with conditional distance (n=106) & Sweet Underground Water + Distance to Sweet Water; Health Facilities: Population Welfare Centre, Basic Health Unit, Rural Health Centre, NGO Dispensary, Child/Mother Care Centre, Private Doctor (MBBS), Hospital/Dispensary, Midwife Facility; Educational Institutions (Boys \& Girls): Primary School, Middle School, High/Higher Secondary School, College, Vocational Institute, Religious Institute; Veterinary: Dispensary/Centre, Private Facility; Infrastructure: Market/Bazar, Cold Storage, Govt Procurement Centre, Agricultural Machinery Workshop, Fuel Pump, Transport Facility, CNG/LPG Facility; Wholesale Markets: Livestock, Grains, Fruits/Vegetables; Communication: PCO, Mobile Signals; Internet: Fixed Line DSL, Cable Net, Mobile Net \\
+\midrule
+
+Categorical encoding (n=15) & Construction Type of Houses; Street Status Type; Toilet Facility; Sewerage System: Cemented Drain, Coverage; Waste Management: Main, Type; Electricity: Availability, Distance; Road: Type, Distance/Length \\
+\midrule
+
+Mutually exclusive counts (n=12) & Farms: No Farms, Poultry, Livestock/Dairy, Fish; Water Course Scheme: Improvement Scheme, Total Water Courses, Improved Water Courses, Total Length; Modern Irrigation: Drip Systems, Sprinkler Systems, Other Systems, No Modern System \\
+
+\end{longtable}
+}
+
+\end{document}
